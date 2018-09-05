@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While If</title>
+    <script>
+        // get 5 amounts from user and add them
+
+        var prices = [];
+        var price = 5;
+        var total = 0;
+        var counter = 0;
+
+        alert("Enter 0 when you are done entering prices. ");
+        while (price !== 0) {
+            price = prompt("Enter the price: ");
+            price = parseInt(price);
+            if (price!== 0) {
+                prices[counter] = price;
+                counter++;
+            }
+        }
+        for (var c = 0; c < prices.length; c++) {
+            total += prices[c];
+            //document.write("Price total " + (c + 1) + " is $" + prices[c] + "<br>");
+
+        }
+
+        alert("Your total is: $" + (total));
+        
+        if (total <= 100) {
+            discount = total - (total * .05);
+            alert("Your discount is 5%");
+            alert("Your new total is: $" + discount);
+        
+        }else if (total > 100 && total <= 250){
+            discount = total - (total * .10);
+            alert("Your discount is 10%");
+            alert("Your new total is: $" + discount);
+
+        }else if (total >250){
+            discount = total - (total * .15);
+            alert("Your discount is 15%");
+            alert("Your new total is: $" + discount);
+        }
+
+
+
+        
+        /*document.write("your discount is: $" + );*/
+        
+    
+    </script>
+    
+</body>
+</html>
