@@ -1,1 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a9c4bd;
+    box-sizing:border-box;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+.left{
+    width: 200px;
+    float: left;
+    min-height: 600px;
+    text-align: center;
+}
+.right{
+    width:800px;
+   text-align: center;
+    min-height: 600px;
+    float:right;
+}
+
+.left img, .right img{
+    margin: 10px auto;
+}
+
+.container {
+    width: 1060px;
+    min-height: 500px;
+    border-radius: 20px;
+    border: 3px solid darkred;
+    color: azure;
+    margin: 5px auto;
+    padding: 15px;
+    background: azure;
+    color: black;
+    overflow: auto;
+}
+
+#large {
+    width: 600px;
+    height: auto;
+}
 
