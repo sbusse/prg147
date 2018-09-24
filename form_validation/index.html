@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>Restaurant Reservation</header>
 
+    <div class="mycode">
+        <form action="confirmation.html" method="get">
+        <label for="fname">First Name: </label>
+        <input type="text" name="fname" id="fname"><br><br>
+        <label for="lname">Last Name: </label>
+        <input type="text" name="lname" id="lname"><br><br>
+        <label for="rdate">Reservation Date: </label>
+        <input type="date" name="rdate" id="rdate"> <br><br>  
+        <label for="rtime">Reservation Time: </label>
+        <input type="time" name="rtime" id="rtime"><br><br>
+
+        <label for="quantity">Number of People Dining: </label><br>
+        <input type="radio" name="rquantity" id="2" value="2" checked>2<br>
+        <input type="radio" name="rquantity" id="4" value="4">4<br>
+        <input type="radio" name="rquantity" id="6" value="6">6<br>
+        <input type="radio" name="rquantity" id="8" value="8">8<br>
+        <br><br>
+
+
+        <label for="preference">Seating Preference: </label>
+        <select name="preference" id="rpreference">
+            <option value="window">Window Seat</option>
+            <option value="corner">Quiet Corner</option>
+            <option value="mix">In the Mix</option>
+          </select><br><br>
+
+        
+        <div class="buttons">
+            <input type="button" id="confirmRes" value="Confirm" onclick="confirmRes()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" name="reset" id="reset" value="Reset" onclick="resetForm()">
+
+            <h2 id="confirmation_header"></h2>
+            <p id="confirmation_msg"></p>
+        </div>
+
+        </form> 
+    </div>
+<script src="js/validate.js"></script>
+
+</body>
+</html>
