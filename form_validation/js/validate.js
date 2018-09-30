@@ -2,16 +2,17 @@ var $ = function (id) {
     "use strict";
     return document.getElementById(id);
 };
-var confirmRes = function () {
+var gdw = function () {
     "use strict";
     var header = "";
     var html = "";
     var required = "<span>****Required****</span>";
     var message = "Please make sure all fields are complete";
-    var first = $("fname").value;
-    var last = $("lname").value;
-    var email = $("rdate").value;
-    var member = $("rtime").value;
+    var fname = $("fname").value;
+    var lname = $("lname").value;
+    var rdate = $("rdate").value;
+    var rtime = $("rtime").value;
+    var quantity = 0;
 
     var frequency = "text";
     if ($("2").checked) {
@@ -42,7 +43,7 @@ var confirmRes = function () {
         rtime = required;
         header = message;
     }
-    $("confirmation_header").firstChild.nodeValue = header;
+    $("confirmation_header").innerHTML = header;
     if (header == message) {
         html = "<tr><td>First Name:</td><td>" + fname + "</td></tr>";
         html += "<tr><td>Last Name:</td><td>" + lname + "</td></tr>";
@@ -60,9 +61,9 @@ var confirmRes = function () {
 };
 var resetForm = function () {
     "use strict";
-    $("reserve").reset();
+    $("startOver").reset();
     $("confirmation_msg").innerHTML = "";
-    $("confirmation_header").firstChild.nodeValue = "";
+    $("confirmation_header").innerText = "";
 };
 window.onload = function () {
     "use strict";
