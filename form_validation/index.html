@@ -11,7 +11,7 @@
     <header>Restaurant Reservation</header>
 
     <div class="mycode">
-        <form action="confirmation.html" method="get">
+        <form action="confirmation.html" method="get" id="startOver">
         <label for="fname">First Name: </label>
         <input type="text" name="fname" id="fname"><br><br>
         <label for="lname">Last Name: </label>
@@ -38,8 +38,8 @@
 
         
         <div class="buttons">
-            <input type="button" id="confirmRes" value="Confirm" onclick="confirmRes()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="button" name="reset" id="reset" value="Reset" onclick="resetForm()">
+            <input type="button" id="reserve" value="Reserve" onclick="gdw()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" name="reset_form" id="Reset" value="Reset" onclick="resetForm()">
 
             <h2 id="confirmation_header"></h2>
             <p id="confirmation_msg"></p>
