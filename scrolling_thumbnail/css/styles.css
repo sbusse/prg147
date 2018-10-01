@@ -1,1 +1,45 @@
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: black;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.leftArrow {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.centerVert {
+    vertical-align: middle;
+    display: inline-block;
+}
 
+img {
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.thumbnail {
+    width: 125px;
+    height: 125px;
+}
+.thumbBox {
+    margin: 5px auto;
+    height: 140px;
+    width: 800px;
+    border: 1px solid black;
+}
+.middleImg {
+    border: 2px solid purple;
+    margin: 5px;
+}
+.largeCenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 20px;
+}
