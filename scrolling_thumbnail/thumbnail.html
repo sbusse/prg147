@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrolling Thumbnaisl</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
+<div class="thumbBox">
+    <img src="images/play.png" alt="Left Arrow" class="leftArrow centerVert" onclick="moveLeft()">
+
+    <img src="/images/step1.jpg" alt="Step 1" id="viewImg1" class="thumbnail">
+    <img src="/images/step2.jpg" alt="Step 2" id="viewImg2" class="thumbnail">
+    <img src="/images/step3.jpg" alt="Step 3" id="viewImg3" class="thumbnail middleImg">
+    <img src="/images/step4.jpg" alt="Step 4" id="viewImg4" class="thumbnail">
+    <img src="/images/step5.jpg" alt="Step 5" id="viewImg5" class="thumbnail">
+
+    <img src="images/play.png" alt="Right Arrow" class="rightArrow" onclick="moveRight()">
+</div>
+
+<div class="largeCenter">
+    <h1 id="title">Step 3</h1>
+    <p id="caption">"Pull the point of the cockpit down to the bottom of the paper, leaving a gap of about 1.5 cm at the end of the paper."</p>
+    <img src="./images/step3.jpg" alt="Step 3" id="large">
+
+</div>
+
+<script src="js/slider.js"></script>
+    
+</body>
+</html>
