@@ -1,1 +1,39 @@
 
+#version1{
+    background-color: purple;
+    position: absolute;
+    padding: 2px;
+    margin: 10px;
+    color: white;
+
+}
+
+#version2{
+    background-color: orange;
+    position: absolute;
+    padding: 5px;
+    margin: 10px;
+    color: white;
+}
+
+#box1{
+    background:#98bf21;
+    height:150px;
+    width:150px;
+    margin: 70px;
+    position:absolute;
+    color: white;
+    border-radius: 5px;
+    font-size: 1px;
+}
+
+#box2{
+    background:red;
+    height:150px;
+    width:150px;
+    margin: 90px;
+    position:absolute;
+    color: white;
+    border-radius: 5px;
+    font-size: 1px;
+}
