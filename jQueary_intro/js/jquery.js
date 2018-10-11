@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-    $("#version1" button).click(function(){
-        var div = $("#box1 div");
+    $("#version1").click(function(){
+        var div = $("#box1");
         div.animate({left:"250px"}, "slow");
         div.animate({height: "350px"}, "slow");
         div.animate({width: "350px"}, "slow");
@@ -9,9 +9,14 @@ $(document).ready(function(){
         });
 
 
-    $("#version2" ).click(function(){
-        $("#box2 div").fadeOut("slow");
+    $("#version2").click(function(){
+        $("#box2").fadeOut("slow");
     });
 
 });
 
+// $(document).ready(function(){
+//     $("p").click(function(){
+//         $(this).hide();
+//     });
+// });
