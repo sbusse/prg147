@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Forms</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="mycode">
+    <h1>jQuery Forms</h1>
+    
+        <div id ="window">
+            <form id="myForm" name="myForm">
+                <fieldset>
+                    <legend>Email Information</legend><br>
+                    <label for="emailAddress">Enter email:</label>
+                    <input type="email" name="emailAddress" id="emailAddress"><span>*</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Enter Phone Number</legend><br>
+                    <label for="phoneNumber">Enter a Phone Number:</label>
+                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="###-###-####"><span>*</span>
+                </fieldset>
+                <fieldset>
+                    <legend>Click one of these to finish.</legend><br>
+                    <input type="submit" value="Submit" id="btnSubmit">
+                    <input type="reset" value="Reset" id="btnReset">
+                </fieldset>
+            
+                </form>
+
+
+        </div>
+    
+</div>
+<script src="js/script.js"></script>
+    
+</body>
+</html>
