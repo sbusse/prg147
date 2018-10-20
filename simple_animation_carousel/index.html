@@ -4,27 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>jQuery Carousel</title>
+    <title>Simple Animation using jQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="windowPanel">
-        <div id="side-left">&#8678;</div> 
-        <ul class="longLineOfImg">
-            <li><img src="images/image_1.jpg" alt="1"></li>
-            <li><img src="images/image_2.jpg" alt="2"></li>
-            <li><img src="images/image_3.jpg" alt="3"></li>
-            <li><img src="images/image_4.jpg" alt="4"></li>
-            <li><img src="images/image_5.jpg" alt="5"></li>
-            <li><img src="images/image_6.jpg" alt="6"></li>
-            <li><img src="images/image_7.jpg" alt="7"></li>
-            <li><img src="images/image_8.jpg" alt="8"></li>
-            <li><img src="images/image_9.jpg" alt="9"></li>
-            <li><img src="images/image_10.jpg" alt="10"></li>
-        </ul>
-        <div id="side-right">&#8680;</div>
+    <div class="container">
+        <main class="row">
+            <div id="left-button" sclass="col-1">
+                <img src="images/arrow-left.png" alt="left arrow">
+            </div>
+            <div id="center" class="col-10">
+                <div id="slide-container">
+                    <div class="slot"><img src="images/image_1.jpg" alt="image_1"></div>
+                    <div class="slot"><img src="images/image_2.jpg" alt="image_2"></div>
+                    <div class="slot"><img src="images/image_3.jpg" alt="image_3"></div>
+                    <div class="slot"><img src="images/image_4.jpg" alt="image_4"></div>
+                    <div class="slot"><img src="images/image_5.jpg" alt="image_5"></div>
+                    <div class="slot"><img src="images/image_6.jpg" alt="image_6"></div>
+                    <div class="slot"><img src="images/image_7.jpg" alt="image_7"></div>
+                    <div class="slot"><img src="images/image_8.jpg" alt="image_8"></div>
+                    <div class="slot"><img src="images/image_9.jpg" alt="image_9"></div>
+                    <div class="slot"><img src="images/images_10.jpg" alt="image_10"></div>
+                </div>
+                <!-- end of slide -->
+            </div>
+
+            <div id="right-button" class="col-1">
+                <img src="images/arrow-right.png" alt="right arrow">
+            </div>
+            <div id="center" class="col-10">
+                <div id="slide-container">
+                    <div class="slot"><img src="images/image_1.jpg" alt="image_1"></div>
+                    <div class="slot"><img src="images/image_2.jpg" alt="image_2"></div>
+                    <div class="slot"><img src="images/image_3.jpg" alt="image_3"></div>
+                    <div class="slot"><img src="images/image_4.jpg" alt="image_4"></div>
+                    <div class="slot"><img src="images/image_5.jpg" alt="image_5"></div>
+                    <div class="slot"><img src="images/image_6.jpg" alt="image_6"></div>
+                    <div class="slot"><img src="images/image_7.jpg" alt="image_7"></div>
+                    <div class="slot"><img src="images/image_8.jpg" alt="image_8"></div>
+                    <div class="slot"><img src="images/image_9.jpg" alt="image_9"></div>
+                    <div class="slot"><img src="images/images_10.jpg" alt="image_10"></div>
+                </div>
+                <!-- end of slide -->
+        </main>
     </div>
 
     
