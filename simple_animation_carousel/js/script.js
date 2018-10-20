@@ -1,27 +1,28 @@
 $(document).ready(function(){
+    var slider = $("slde_container");
+    num_slots = 10;
+    count = 0;
 
-        $("#side-right").click(function(){
-            var currenSlide = $(".longLineOfImg").css("left");
-            if(parseInt(currenSlide) < -1600){
-                $(".longLineOfImg").css({
-                    left: 405
+        $("#right-button").click(function(){
+            count += 1;
+
+            if(count >= num_slots) {
+                count = 0;
+                slider.animate({
+                    left: "-=100%"
                 })
+                slider.animate({
+                    left: "+=1000%"
+                }, 0);
+            } else {
+                slider.animate({
+                    left: "-=100%"
+                });
             }
-            $(".longLineOfImg").animate({
-                left: '-=405'
-            },1000);
         });
 
-        $("#side-left").click(function(){
-            var currenSlide = $(".longLineOfImg").css("left");
-            if(parseInt(currenSlide) >= 0){
-                $(".longLineOfImg").css({
-                    left: -2023
-                })
-            }
-            $(".longLineOfImg").animate({
-                left: '+=405'
-            },1000);
+        $('#left-button').click(function() {
+            alert('left');
         });
 
 });
