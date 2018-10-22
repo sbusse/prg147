@@ -10,6 +10,15 @@ body{
 .container{
     background: ivory;
 }
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: darkcyan;
+}
+
+h5{
+    text-align: center;
+}
 #slide-container{
     left: 0;
     position: relative;
@@ -27,106 +36,61 @@ body{
 #left-button,
 #right-button{
     cursor: pointer;
-    padding-top: 100px;
+    padding-top: 75px;
 }
-#center{
-    height: 600px;
-    overflow: hidden;
-    float: left;
-}
-.slot{
-    margin: 15px 0px;
-    width: 10%;
-    /* float: left; */
-    display: inline-block;
-}
-slot img{
-    padding: 20px 10%;
-    width: 100%;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-.longLineOfImg{
+.imageBox{
+    display: block;
     position: relative;
-    width: 2500px;
+    margin: 1px auto;
+    max-width: 550px;
 }
 
-.longLineOfImg li{
-    list-style: none;
-    display: inline-block;
+
+#caption{
+    text-align: center;
+
 }
 
-.windowPanel{
-    width: 400px;
-    height: 250px;
-    position: relative;
+#slides{
+    text-align: center;
+    display: none;
+}
+
+#slide{
+    display: block;
+    max-width: 500px;
     margin: 10px auto;
-    border-radius: 5px;
-    overflow: hidden;
+    /* height: auto; */
+    cursor: pointer;
 }
 
 #side-left{
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.5);
     position: absolute;
+    color: white;
     top: 0;
     bottom: 0;
     left: 0;
     width: 25px;
-    z-index: 1;
     line-height: 250px;
     text-align: center;
     cursor: pointer;
+    z-index: 5;
 }
 #side-right{
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.5);
     position: absolute;
+    color: white;
     top: 0;
     bottom: 0;
     right: 0;
     width: 25px;
-    z-index: 1;
     line-height: 250px;
     text-align: center;
     cursor: pointer;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-m-1 {width: 8.33%;}
-    .col-m-2 {width: 16.66%;}
-    .col-m-3 {width: 25%;}
-    .col-m-4 {width: 33.33%;}
-    .col-m-5 {width: 41.66%;}
-    .col-m-6 {width: 50%;}
-    .col-m-7 {width: 58.33%;}
-    .col-m-8 {width: 66.66%;}
-    .col-m-9 {width: 75%;}
-    .col-m-10 {width: 83.33%;}
-    .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+img{
+    width: 500px;
+    height: 250px;
 }
