@@ -1,55 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple Animation using jQuery</title>
+    <title>jQuery Slide Show</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <div class="container">
-        <main class="row">
-            <div id="left-button" sclass="col-1">
-                <img src="images/arrow-left.png" alt="left arrow">
-            </div>
-            <div id="center" class="col-10">
-                <div id="slide-container">
-                    <div class="slot"><img src="images/image_1.jpg" alt="image_1"></div>
-                    <div class="slot"><img src="images/image_2.jpg" alt="image_2"></div>
-                    <div class="slot"><img src="images/image_3.jpg" alt="image_3"></div>
-                    <div class="slot"><img src="images/image_4.jpg" alt="image_4"></div>
-                    <div class="slot"><img src="images/image_5.jpg" alt="image_5"></div>
-                    <div class="slot"><img src="images/image_6.jpg" alt="image_6"></div>
-                    <div class="slot"><img src="images/image_7.jpg" alt="image_7"></div>
-                    <div class="slot"><img src="images/image_8.jpg" alt="image_8"></div>
-                    <div class="slot"><img src="images/image_9.jpg" alt="image_9"></div>
-                    <div class="slot"><img src="images/images_10.jpg" alt="image_10"></div>
-                </div>
-                <!-- end of slide -->
-            </div>
-
-            <div id="right-button" class="col-1">
-                <img src="images/arrow-right.png" alt="right arrow">
-            </div>
-            <div id="center" class="col-10">
-                <div id="slide-container">
-                    <div class="slot"><img src="images/image_1.jpg" alt="image_1"></div>
-                    <div class="slot"><img src="images/image_2.jpg" alt="image_2"></div>
-                    <div class="slot"><img src="images/image_3.jpg" alt="image_3"></div>
-                    <div class="slot"><img src="images/image_4.jpg" alt="image_4"></div>
-                    <div class="slot"><img src="images/image_5.jpg" alt="image_5"></div>
-                    <div class="slot"><img src="images/image_6.jpg" alt="image_6"></div>
-                    <div class="slot"><img src="images/image_7.jpg" alt="image_7"></div>
-                    <div class="slot"><img src="images/image_8.jpg" alt="image_8"></div>
-                    <div class="slot"><img src="images/image_9.jpg" alt="image_9"></div>
-                    <div class="slot"><img src="images/images_10.jpg" alt="image_10"></div>
-                </div>
-                <!-- end of slide -->
-        </main>
+    
+    <div class="container">  
+        <h1>jQuery Simple Animation</h1>   
+        <br>
+        <br>   
+        <h4 id="caption">This is Image 1</h4>
+        <div class="imageBox">
+            <div id="side-left"><</div>
+            <img src="images/image_1.jpg" alt="This is Image 1" id="slide">
+            <div id="side-right">></div>
+        </div>  
+        <div id="slides">
+            <img src="images/image_1.jpg" alt="This is Image 1" >
+            <img src="images/image_2.jpg" alt="This is Image 2">
+            <img src="images/image_3.jpg" alt="This is Image 3">
+            <img src="images/image_4.jpg" alt="This is Image 4">
+            <img src="images/image_5.jpg" alt="This is Image 5">
+            <img src="images/image_6.jpg" alt="This is Image 6">
+            <img src="images/image_7.jpg" alt="This is Image 7">
+            <img src="images/image_8.jpg" alt="This is Image 8">
+            <img src="images/image_9.jpg" alt="This is Image 9">
+            <img src="images/image_10.jpg" alt="This is Image 10">
+        </div>
+        <h5>Click on image to start and stop the timer.</h5>
     </div>
+
 
     
 </body>
