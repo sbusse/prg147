@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>jSon Carousel</title>
 
+</head>
+<body>
+    <div id="speakerbox">
+        <a href="#" id="prev_btn">&laquo;</a>
+        <a href="#" id="next_btn">&raquo;</a>
+
+        <div id="carousel">
+            <script id="slidestpl" type="text/template">
+                {{#slides}}
+                <div class="slide">
+                    <img src="images/{{slide_img}}" alt="{{slide-alt}}" />
+                    <h1>{{slide-alt}}</h1>
+                </div>
+                {{/slides}}
+                </script>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+
+    <script type="text/javascript">
+
+    $(function(){
+
+        $.getJSON("myData.json", function(data){
+            var template = $('#slidestpl').html();
+            var html = Mustache.to_html(template, data);
+            $("#carousel").html(html);
+
+            $("#carousel").cycle({
+                fx: "fade",
+                pause: 1,
+                next: "#next_btn",
+                prev: "prev_btn",
+                speed: 800,
+                cleartypeNoBg: true,
+                timeout: 1000
+            });
+
+        }); //getJSON
+    }); //function
+
+    </script>
+
+
+
+    
+</body>
+</html>

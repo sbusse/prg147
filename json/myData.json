@@ -1,0 +1,46 @@
+{
+    "slides": [
+      {
+        "slide_img": "image1.jpg",
+        "slide-alt": "Hey!  I'm talking to you!!"
+      },
+      {
+        "slide_img": "image2.jpg",
+        "slide-alt": "Yeah . . I'm good out here."
+      },
+      {
+        "slide_img": "image3.jpg",
+        "slide-alt": "More snow?!  Really?!!"
+      },
+      {
+        "slide_img": "image4.jpg",
+        "slide-alt": "Well I'm sure I don't know what you're talking about."
+      },
+      {
+        "slide_img": "image5.jpg",
+        "slide-alt": "Oh . . this can't be good!"
+      },
+      {
+        "slide_img": "image6.jpg",
+        "slide-alt": "Sure thing . I'll get right on that!"
+      },
+      {
+        "slide_img": "image7.jpg",
+        "slide-alt": "What are you looking at?"
+      },
+      {
+        "slide_img": "image8.jpg",
+        "slide-alt": "My bad!!"
+      },
+      {
+        "slide_img": "image9.jpg",
+        "slide-alt": "Hey there! What's your name?"
+      },
+      {
+        "slide_img": "image10.jpg",
+        "slide-alt": "Oh man!!  I hate it when they hug me!!"
+      }
+      
+      
+      ]
+  }
