@@ -3,53 +3,48 @@
 }
 #speakerbox {
     width: 300px;
+    height: 500px;
     margin: 0 auto;
     background: #93a1a1;
     padding: 1px 20px;
     border-radius: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
+
 
 #speakerbox #next_btn, #speakerbox #prev_btn{
     background: #d33682;
     padding: 5px 10px;
     border-radius: 10px;
     margin: 10px 0;
-    display: inline-block
+    display: inline-block;
 }
 
 #speakerbox a#next_btn, #speakerbox a#prev_btn{
     text-decoration: none;
     color: white;
-
+    background: #eb0e79;
+    align-content: center;
 }
 
-h1, h5{
+/* #slides{
     text-align: center;
-    color: white;
+} */
+#carousel{
+    background: #93a1a1 !important;
 }
-.header{
-    background-image: linear-gradient(#083848, white);
-    background-color: #083848;
-    height: 150px;
-}
-
-#caption{
-    text-align: center;
-    color: #083848;
-    font-size: 25px;
-
-}
-
-#slides{
-    text-align: center;
-    display: none;
-}
-
 #slide{
     display: block;
     max-width: 400px;
     margin: 10px auto;
     height: auto;
     cursor: pointer;
+    background: #93a1a1;
 }
+
+h1, h5{
+    text-align: center;
+    color: white;
+}
+
+
