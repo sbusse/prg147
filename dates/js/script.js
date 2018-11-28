@@ -6,32 +6,39 @@ var date = new Date();
 var day = date.getDate();
 var month = date.getMonth() + 1;  
 var year = date.getFullYear();
-var marriedmonth=0;
-var marriedyear=0;
 
 
-function setTheDate(){
-    $("today").value = month + "/" + day + "/" + year;
+
+// function setTheDate(){
+//     $("today").value = month + "/" + day + "/" + year;
+// }
+
+// $(document).ready(function(){
+//     var years = "";
+//     $('#dateAnn').datepicker({
+//         onSelect: function (value, ui) {
+//             var today = new Date();
+//             years = today.getFullYear() - ui.selectedYear;
+//             $('#time').val(years);
+//         },
+//         changeMonth: true,
+//         changeYear: true
+//     })
+// });
+
+function getAnniversary(){
+    var years = "";
+    $('#dateAnn').datepicker({
+        onSelect: function(value, ui) {
+            var today = new Date();
+            years = today.getFullYear() - ui.selectedYear;
+            $('#time').val(years);
+        },
+        changeMonth: true,
+        changeYear: truue
+    })
 }
 
-function calculate(){
-    var today = new Date (("today").value);
-    var anniversary = $("anniversary").value;
-
-    var amonth = (parseInt(anniversary.substring(0,2)));
-    var ayear = (parseInt(anniversary.substring(6,10)));
-
-    if (amonth > month){
-
-        marriedyear = year - ayear -1;
-        marriedmonth = 12 - amonth + month;
-    } else{
-
-        marriedyear = year - ayear;
-        marriedmonth = month - amonth;
-    }
-    $("reply").value = "You have been married for " + marriedyear + " years and " + marriedmonth + "months.";
-}
 
 function dayGreet(){
     var dateStatement = "";
@@ -85,8 +92,5 @@ function daysToVacation(){
 window.onload = function(){
     dayGreet();
     daysToVacation();
-    setTheDate();
-    $("anniversary").value="mm/dd/yyy"
-
-    $("married").onclick = calculate
+    getAnniversary();
 }
