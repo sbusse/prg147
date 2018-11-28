@@ -5,26 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="css/styles.css"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
+
     <title>Working with Dates</title>
 </head>
 <body>
 
 <header class="container">
     <h1>Working with Dates in JavaScript</h1>
-    <h3 class="greeting">*Greeting*</h3>
+    <h3 id="myday">*Greeting*</h3>
+    <br>
+<br>    
 </header>
 
 <div class="container">
-    <h1>Days Till Graduation</h1>
+    <h1>Calculate days till My Vacation</h1>
     <p>Today's Date is:</p>
     <p id="todaysDate">*Todays Date*</p>
-    <p>Graduation Day is:</p>
-    <p id="gradDate">*Graduation day*</p>
-    <p>I have <span id="daysleft"> days left until I graduate!!!!!!</span></p>
-
+    <p>Vacation Day is:</p>
+    <p id="vacationDue">*Vacation day*</p>
+    <p>I have <span id="daysleft"> </span> days left until Vacation!!!!!!</p>
+    <br>
+    <br>
 </div>
+
+<div class="container">
+    <h1>Calculate my Anniversary</h1>
+        <form name="form" method="POST" action=""></form>
+        <p>
+            <label>Today's Date: 
+                <input type="text" name="today" id="today">
+            </label>
+        </p>
+        <p>
+            <label>Enter your anniversary:
+                <input type="text" name="anniversary" id="anniversary">
+            </label>
+
+            <input type="button" name="married" id="married" value="How Long Married??">
+            <br>
+            <br>
+            <br>
+        </p>
+</div>
+
+
     
 </body>
 </html>
