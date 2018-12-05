@@ -1,5 +1,25 @@
-var $ = function (id) {
-    return document.getElementById(id);
+$(document).ready(function(){
+    
+});
+
+
+function timeTogether(){
+
+    var today = new Date();
+
+    $("todaysDate").innerHTML = today.toDateString();
+
+    var wedding = document.getElementById("myDate").value;
+    // $("weddingDay").innerHTML = wedding.toDateString();
+    document.getElementById("demo").innerHTML = x;
+    
+    if (today < wedding){
+        var timeDiff = Math.abs(wedding.getTime() - today.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        $("daysTogether").innerHTML = diffDays;
+    } else {
+        $("daysTogether").innerHTML = "You've been together a LONG time!!!"
+    }
 }
 
 var date = new Date();
@@ -8,36 +28,6 @@ var month = date.getMonth() + 1;
 var year = date.getFullYear();
 
 
-
-// function setTheDate(){
-//     $("today").value = month + "/" + day + "/" + year;
-// }
-
-// $(document).ready(function(){
-//     var years = "";
-//     $('#dateAnn').datepicker({
-//         onSelect: function (value, ui) {
-//             var today = new Date();
-//             years = today.getFullYear() - ui.selectedYear;
-//             $('#time').val(years);
-//         },
-//         changeMonth: true,
-//         changeYear: true
-//     })
-// });
-
-function getAnniversary(){
-    var years = "";
-    $('#dateAnn').datepicker({
-        onSelect: function(value, ui) {
-            var today = new Date();
-            years = today.getFullYear() - ui.selectedYear;
-            $('#time').val(years);
-        },
-        changeMonth: true,
-        changeYear: truue
-    })
-}
 
 
 function dayGreet(){
