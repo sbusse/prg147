@@ -1,44 +1,152 @@
 <!DOCTYPE html>
-<head>
- 
-    <title>Hangman Game</title>
-    <link href="css/styles.css"rel="stylesheet"type="text/css"/>
-    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script src="js/controller.js"></script> -->
- 
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
 
-<script>
-    $(document).ready(function(){
-        var hangmanGame;
-    
-        $("button").click(function(){
-            $.getJSON("quizbank.json", function(hangmanGame){
-               console.log(hangmanGame);
-               $("#test").text("The word is " + hangmanGame.wordlist.word + " and the clue is " + hangmanGame.clue + ".");
-            });
-    
-            
-        });
-    });       
-</script>
+    <title class="clue">Final Project - Hang Man</title>
 
-<body>
+  </head>
 
-<div id="topbar">Hangman Game</div>
-<div class="spacer"></div>
+  <script>
 
-<div id="gameContent">
+    // $( document ).ready(function() {
+    $.getJSON("myData.json", function(data){
+        var template = $('#cluetpl').html();
+        var html = Mustache.to_html(template, data);
+        $(".clue").html(html);
+        console.log(data);
 
-    <button>Get JSON data</button>
+      }); //getJSON
+  </script>
 
-    <p id="test"></p>
- 
-</div>
+  <body class="navbar">
 
-</body>
+      <div class="container-fluid ">
+          <div class="row">
+            <div class="col-sm-4"></div> 
+            <div class="col-sm-8 guess">
+                <script id="cluetpl" type="text/template">
+                  {{#wordList}}
+                  <div class="col-sm-8 guess">
+                      <h1 class="col-sm-12 guess">{{hint}}</h1>
+                  </div>
+                  {{/wordList}}
+                </script>
+          </div>
+        </div>
+      </div>
+
+
+    <div col-sm-8 guess class="clue">
+      <script id="cluetpl" type="text/template">
+        {{#wordList}}
+        <div>
+            <h1>{{hint}}</h1>
+        </div>
+        {{/wordList}}
+      </script>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 text-center display">
+          <h2 class='letters'>A</h2>
+          <h2 class='letters'>B</h2>
+          <h2 class='letters'>C</h2>
+          <h2 class='letters'>D</h2>
+          <h2 class='letters'>E</h2>
+          <h2 class='letters'>F</h2>
+          <h2 class='letters'>G</h2>
+          <h2 class='letters'>H</h2>
+          <h2 class='letters'>I</h2>
+          <h2 class='letters'>J</h2>
+          <h2 class='letters'>K</h2>
+          <h2 class='letters'>L</h2>
+          <h2 class='letters'>M</h2>
+          <h2 class='letters'>O</h2>
+          <h2 class='letters'>Q</h2>
+          <h2 class='letters'>R</h2>
+          <h2 class='letters'>S</h2>
+          <h2 class='letters'>T</h2>
+          <h2 class='letters'>U</h2>
+          <h2 class='letters'>V</h2>
+          <h2 class='letters'>W</h2>
+          <h2 class='letters'>X</h2>
+          <h2 class='letters'>Y</h2>
+          <h2 class='letters'>Z</h2>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-11">
+      <div class="counter">
+        <p id='chances'>Chances Remaining: 10</p>
+        <p id='correct'>Correct: 0</p>
+        <p id='incorrect'>Incorrect: 0 </p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid ">
+      <div class="row">
+        <div class="col-sm-4"></div> 
+        <div class="col-sm-8 guess">
+            <p>Type a letter to find the word. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid ">
+      <div class="row">
+        <div class="col-sm-4"></div> 
+        <div class="col-sm-8 guess">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4"></div> 
+      <div class="col-sm-8 gameLetters">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2"></div>  
+      <div class="col-sm-8">
+        <div class='hangContain'>
+          <div class='postUp vanish'></div>
+          <div class='postRight vanish'></div>
+          <div class='rope vanish'></div>
+          <div class='head vanish'></div>
+          <div class='body vanish'></div>
+          <div class='leftArm vanish'></div>
+          <div class='rightArm vanish'></div>
+          <div class='leftLeg vanish'></div>
+          <div class='rightLeg vanish'></div>
+          <div class='floor vanish'></div>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+
+    <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src='js/script.js'></script>
+  </body>
 </html>
